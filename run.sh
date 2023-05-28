@@ -1,5 +1,7 @@
+set -x
+
 java \
-  -classpath "$HOME"/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.1.0/spring-boot-starter-web-3.1.0.jar:\
+  -p "$HOME"/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.1.0/spring-boot-starter-web-3.1.0.jar:\
 \
 "$HOME"/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.0/spring-boot-starter-3.1.0.jar:\
 "$HOME"/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.0/spring-boot-starter-logging-3.1.0.jar:\
@@ -10,7 +12,6 @@ java \
 "$HOME"/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:\
 "$HOME"/.m2/repository/org/slf4j/jul-to-slf4j/2.0.7/jul-to-slf4j-2.0.7.jar:\
 "$HOME"/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:\
-"$HOME"/.m2/repository/org/springframework/spring-core/6.0.9/spring-core-6.0.9.jar:\
 "$HOME"/.m2/repository/org/springframework/spring-jcl/6.0.9/spring-jcl-6.0.9.jar:\
 "$HOME"/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:\
 "$HOME"/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.1.0/spring-boot-starter-json-3.1.0.jar:\
@@ -30,10 +31,10 @@ java \
 "$HOME"/.m2/repository/io/micrometer/micrometer-commons/1.11.0/micrometer-commons-1.11.0.jar:\
 "$HOME"/.m2/repository/org/springframework/spring-webmvc/6.0.9/spring-webmvc-6.0.9.jar:\
 "$HOME"/.m2/repository/org/springframework/spring-aop/6.0.9/spring-aop-6.0.9.jar:\
-"$HOME"/.m2/repository/org/springframework/spring-context/6.0.9/spring-context-6.0.9.jar:\
-"$HOME"/.m2/repository/org/springframework/spring-expression/6.0.9/spring-expression-6.0.9.jar \
-\
-  -p "$HOME"/.m2/repository/org/springframework/boot/spring-boot/3.1.0/spring-boot-3.1.0.jar:\
+"$HOME"/.m2/repository/org/springframework/spring-expression/6.0.9/spring-expression-6.0.9.jar:\
+"$HOME"/.m2/repository/org/springframework/boot/spring-boot/3.1.0/spring-boot-3.1.0.jar:\
 target/classes:\
+"$HOME"/.m2/repository/org/springframework/spring-context/6.0.9/spring-context-6.0.9.jar:\
+"$HOME"/.m2/repository/org/springframework/spring-core/6.0.9/spring-core-6.0.9.jar:\
 "$HOME"/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.0/spring-boot-autoconfigure-3.1.0.jar \
   -m spring.jpms/org.example.Main
